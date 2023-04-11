@@ -1,0 +1,24 @@
+{:deps {org.clojure/clojure               {:mvn/version "1.11.1"}
+        org.clojure/tools.logging         {:mvn/version "1.2.4"}
+
+        ;; Lets be explicit about logging
+        ch.qos.logback/logback-classic    {:mvn/version "1.3.4"}
+        ch.qos.logback/logback-core       {:mvn/version "1.3.4"}
+        org.slf4j/slf4j-api               {:mvn/version "2.0.3"}
+        org.slf4j/jul-to-slf4j            {:mvn/version "2.0.3"}
+        org.slf4j/jcl-over-slf4j          {:mvn/version "2.0.3"}
+        org.slf4j/log4j-over-slf4j        {:mvn/version "2.0.3"}
+
+        ring/ring-core                    {:mvn/version "1.9.5"}
+        ring/ring-jetty-adapter           {:mvn/version "1.9.5"}
+
+        ;; ring/ring-codec                   {:mvn/version "1.2.0"}
+        ;; ring/ring-defaults                {:mvn/version "0.3.3"}
+
+        }
+
+ :paths ["src" "resources"]
+ 
+ :aliases
+ {:main {:main-opts ["-m" "hello.main"]
+         :jvm-opts ["-Dclojure.tools.logging.factory=clojure.tools.logging.impl/slf4j-factory"]}}}
